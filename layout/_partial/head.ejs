@@ -16,19 +16,25 @@
     fb_admins: theme.fb_admins,
     fb_app_id: theme.fb_app_id
   }) %>
-  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <%- partial('google-analytics', { head: true }) %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <%- css('css/style') %>
-  <% if (theme.simple_japanese.custom_assets.css) { %>
-    <%- css(theme.simple_japanese.custom_assets.css) %>
-  <% } %>
+  <%# if (config.simple_japanese.custom_assets.css){ %>
+    <%# - css(config.simple_japanese.custom_assets.) %>
+  <%# } %>
   <%- partial('gen-structured-data') %>
   <% if (is_post() && config.generator_amp){ %>
     <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path.replace(".html", "") %>/amp/index.html">
   <% } %>
-  <% if (theme.simple_japanese.custom_assets.js) { %>
-    <%- js(theme.simple_japanese.custom_assets.js) %>
-  <% } %>
+  <%# if (config.simple_japanese.custom_assets.js) { %>
+    <%# - js(config.simple_japanese.custom_assets.js) %>
+  <%# } %>
 </head>
