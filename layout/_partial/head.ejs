@@ -1,3 +1,7 @@
+<% if (is_post() && config.generator_amp){ %>
+  <link rel="amphtml" href="<%= config.url %>/<%= page.path %>/amp/index.html">
+<% } %>
+
 <% var title = page.title %>
 <!DOCTYPE html>
 <html>
