@@ -1,0 +1,33 @@
+# Site
+author: AUTHORN_AME
+author_title: DESCRIPTION
+avatar: AVATAR_IMAGE
+
+# URL 
+url: WEBPAGE_URL
+
+# Sidebar
+widgets:
+  - search
+  - profile
+  - recent_posts
+  - tagcloud
+  - archive
+
+# Contact
+contact1:
+  url: TWITTER_URL
+  icon: twitter # font-awesome icon. e.x) fa-github
+contact2:
+  url: GITHUB_URL
+  icon: github # font-awesome icon. e.x) fa-github
+
+# Google tag manager
+google_analytics: GOOGLE_TAG_MANAGER_ID
+
+# Custom assets
+simple_japanese: 
+  custom_assets: 
+    css: CUSTOM_CSS_PATH
+    js: CUSTOM_JS_PATH
+
