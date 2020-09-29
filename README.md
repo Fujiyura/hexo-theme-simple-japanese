@@ -1,3 +1,9 @@
+# CAUTION
+This repository is forked from "/mitsuruog/hexo-theme-simple-japanese" and customized for my website.
+If you want to get hexo-theme-simple-japanese the origine version, please access repository following:
+
+- https://github.com/mitsuruog/hexo-theme-simple-japanese
+
 # hexo-theme-simple-japanese
 Hexo blog theme. it makes Japanese more readable and beautiful.
 
