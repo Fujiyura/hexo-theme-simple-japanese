@@ -1,9 +1,14 @@
 .navbar
   background: color-primary;
+  display: flex;
+  align-items: center;
+  
+  .navbar-item
+    color: color-white;
+    &:hover
+      color: color-white;
+      background: darken(color-primary, 15%);
 
   .navbar-brand
-    a.navbar-item
-      color: color-white;
-      &:hover
-        color: color-white;
-        background: darken(color-primary, 15%);
+    margin: 0;
+    padding: 0;
