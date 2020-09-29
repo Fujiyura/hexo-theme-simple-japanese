@@ -7,15 +7,21 @@
     <div class="media-content">
       <p>
         <strong>
-          <span><%=theme.author %></span>
+          <span><%=config.author %></span>
           <span class="icon">
-            <a href="<%- url_for(theme.contact.url) %>" target="_blank">
-              <i class="fa fa-<%=theme.contact.icon %>"></i>
+            <a href="<%- url_for(theme.contact1.url) %>" target="_blank">
+              <i class="fa fa-<%=theme.contact1.icon %>"></i>
+            </a>
+          </span>
+          <span class="icon">
+            <a href="<%- url_for(theme.contact2.url) %>" target="_blank">
+              <i class="fa fa-<%=theme.contact2.icon %>"></i>
             </a>
           </span>
         </strong>
         <br>
-        <span><%= theme.author_title %></span>
+        <span><%= theme.author_title %>
+        <a href= "<%- url_for(config.aboutPage) %>" >≪more≫</a></span>
       </p>
     </div>
   </aside>
