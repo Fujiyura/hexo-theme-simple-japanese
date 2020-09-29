@@ -1,12 +1,40 @@
 <article class="post">
+  <% var index = page.permalink.includes('index.html')? true : false %>
+  <% var page404 = page.permalink.includes('404.html')? true : false %>
   <figure class="post-thumbnail">
     <%- partial('thumbnail', { post: post, hasLink: false, type: "" }) %>
   </figure>
-  <span><%- partial('date', { datetime: post.date }) %></span>
+  
+  <% if (!page404){ %>
+    <span class="postdate" >
+      <span><%- partial('date', { datetime: post.date }) %></span>
+      <% if( date(post.date, 'YYYYMMDD') != date(post.updated, 'YYYYMMDD') ){ %>
+        <span class="postdate-updated"> Updated : <%- partial('date', { datetime: post.updated }) %></span>
+      <% } %>
+    </span>
+  <% } %>
+
   <h1 class="title"><%=post.title %></h1>
   <%- partial('tag', { post: post }) %>
   <div class="content">
+    <% if (!index && !page404){ %>
+      <div id="toc" class="toc-article">
+        <span class="toc-title">目次</span>
+        <%- toc(post.content, {list_number: false}) %>
+      </div>
+    <% } %>
     <%- post.content %>
   </div>
-  <%- partial('nav', { post: post }) %>
+  <hr>
+  <div class="post-footer">
+    <% if (!page404){ %>
+      <div>
+        <%- partial('article-share') %>
+      </div>
+      <hr>
+    <% } %>
+    <div>
+      <%- partial('nav', { post: post }) %>
+    </div>
+  </div>
 </article>
